@@ -1,0 +1,1 @@
+This is the About page. It is located at "app/Views/pages/about.php"

@@ -1,0 +1,1 @@
+I am John Michael Gonzales and this is my home page. It is located at "app/Views/pages/home.php"
