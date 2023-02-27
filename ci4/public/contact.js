@@ -8,7 +8,7 @@ $("#contactForm").submit(function (event) {
     var message = $("textarea#message").val();
 
     $.ajax({
-        url: "<?php echo base_url('contact.php'); ?>",
+        url: "<?php echo base_url('contact'); ?>",
         type: "POST",
         data: {
             name: name,
