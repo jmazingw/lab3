@@ -22,7 +22,7 @@ class Contact extends Controller {
             return $this->response->setJSON(array("status" => "error"));
         }
 
-        $sql = "INSERT INTO jdgonzales2_myguests (ANSname, ANSsubject, email, ANSmessage) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO jdgonzales2_myguests(ANSname, ANSsubject, email, ANSmessage) VALUES (?, ?, ?, ?)";
 
         $result = $db->query($sql, [$name, $subject, $email, $message]);
 
