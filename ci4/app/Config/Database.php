@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => '',
-        'password' => '',
-        'database' => '',
+        'hostname' => '192.168.150.213',
+        'username' => 'webprogss211',
+        'password' => 'fancyR!ce36',
+        'database' => 'webprogss211',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
