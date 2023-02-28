@@ -1,5 +1,6 @@
 <?php
 if(empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+  error_log('Error: Invalid form data');
   echo json_encode(array("status" => "error"));
   exit();
 }
@@ -18,6 +19,7 @@ $dbname = "webprogss211";
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
+  error_log('Error: Connection failed - ' . $conn->connect_error);
   die("Connection failed: " . $conn->connect_error);
 }
 
@@ -27,8 +29,10 @@ VALUES ('$name', '$subject', '$email', '$message')";
 if ($conn->query($sql) === TRUE) {
   echo json_encode(array("status" => "success"));
 } else {
+  error_log('Error: ' . $sql . ' - ' . $conn->error);
   echo json_encode(array("status" => "error"));
 }
 
 $conn->close();
+
 ?>
